@@ -10,7 +10,7 @@
     align-items: center;
     gap: 10px;
 }
-.left__header button{
+.left__header .btn{
     border-radius: 12px;
     background: #fff;
     margin-left: 20px;
@@ -45,4 +45,17 @@
     line-height: 14px;
     cursor: pointer;
 }
-
+.view-all__btn{
+    position: absolute;
+    left: 350px;
+    top: 350px;
+    color: #fff;
+    background-color: #0F4C81;
+    border-radius: 16px;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border: none;
+    line-height: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}

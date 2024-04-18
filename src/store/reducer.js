@@ -1,4 +1,4 @@
-import { ADD_TODO, SET_VIEW, SET_TODO_INPUT } from "./constants"
+import { ADD_TODO, SET_VIEW, SET_TODO_INPUT, SET_DAY_PICKER } from "./constants"
 import moment from "moment"
 
 const initState = {
@@ -17,6 +17,27 @@ const initState = {
         resouce: ""
     },
     {
+        start: moment("2024-04-21T11:00:00").toDate(),
+        end: moment("2024-04-21T12:00:00").toDate(),
+        title: "Meetting",
+        color: "blue",
+        resouce: "#"
+    },
+    {
+        start: moment("2024-04-22T10:00:00").toDate(),
+        end: moment("2024-04-22T11:00:00").toDate(),
+        title: "Meetting Customer",
+        color: "orange-light",
+        resouce: "#"
+    },
+    {
+        start: moment("2024-04-23T13:00:00").toDate(),
+        end: moment("2024-04-24T14:00:00").toDate(),
+        title: "Conference",
+        color: "orange-dark",
+        resouce: ""
+    },
+    {
         start: moment("2024-04-15T11:00:00").toDate(),
         end: moment("2024-04-15T12:00:00").toDate(),
         title: "Meetting",
@@ -24,7 +45,8 @@ const initState = {
         resouce: "#"
     },],
         todoInput: '',
-    view: 'month',
+        view: 'month',
+        dayPicker: '',
 }
 const reducer = (state, action) => {
     switch (action.type) {
@@ -42,6 +64,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 view: action.payload
+            }
+        case SET_DAY_PICKER:
+            return {
+                ...state,
+                dayPicker: action.payload
             }
         default:
             throw new Error('Invalid action')

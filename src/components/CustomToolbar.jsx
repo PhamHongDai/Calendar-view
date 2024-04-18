@@ -7,14 +7,13 @@ import moment from 'moment';
 
 const CustomToolbar = (props) => {
     const [state, dispatch] = useStore()
-    const { todos, view, todoInput, date} = state
+    const { todos, view, todoInput} = state
     const handleView = (input) => {
         dispatch(actions.setView(input))
     }
-
     useEffect(() => {
         props.onView(view);
-      },[view, date]);
+      },[view]);
 
     const goToDayView = () => {
         handleView('day');
@@ -40,6 +39,10 @@ const CustomToolbar = (props) => {
     const goToToday = () => {
         props.onNavigate(Navigate.TODAY);
     };
+    const handleViewAll = () => {
+        props.onNavigate(Navigate.DATE, new Date());
+        props.onView('agenda')
+    }
 
     const handleSelectView = (e) => {
         if (e.target.value === "month")
@@ -54,7 +57,8 @@ const CustomToolbar = (props) => {
     return (
         <div className="toolbar-contents">
             <div className="left__header">
-                <button onClick={goToToday}>Today</button>
+                <button className="btn" onClick={goToToday}>Today</button>
+                <button className="view-all__btn" onClick={handleViewAll}>View All</button>
                 <i className='bx bx-chevron-left' onClick={goToBack}></i>
                 <i className='bx bx-chevron-right' onClick={goToNext}></i>
                 {view === "month" ? (
@@ -63,7 +67,7 @@ const CustomToolbar = (props) => {
                     <h2>{moment(props.date).format("DD/MM/YYYY")} -
                         {moment(props.date).add(1,'month').format("DD/MM/YYYY")}</h2>
                 ) : view === "day" ? (
-                    <h2>{moment(props.date).format("DD MMM YYYY ")}</h2>
+                    <h2>{props.label}</h2>
                 ) : (
                     <h2>{moment(props.date).format("MMMM YYYY ")}</h2>
                 )

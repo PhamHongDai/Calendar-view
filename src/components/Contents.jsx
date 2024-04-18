@@ -19,12 +19,15 @@ const Contents = () => {
   const handleDialog = () => {
     setShowDialog(prev => !prev)
   }
-  const { todos, view, todoInput, date} = state
+  const { todos, view, todoInput, dayPicker} = state
   const handleView = (input) => {
     dispatch(actions.setView(input))
   }
   const handleTodo = (input) => {
     dispatch(actions.addToDo(input))
+  }
+  const handleDayPicker = (input) => {
+    dispatch(actions.setDayPicker(input))
   }
   return (
     <div className="main-contents">
@@ -40,6 +43,7 @@ const Contents = () => {
           event={event}
           setEvent={setEvent}
           handleDialog={handleDialog}
+          view={view}
           handleView={handleView}
           todos={todos}
           />

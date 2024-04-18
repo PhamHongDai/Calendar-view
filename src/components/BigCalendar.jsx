@@ -1,20 +1,22 @@
 import styles from "react-big-calendar/lib/css/react-big-calendar.css"
 import st from "./../css/BigCalendar.css"
-import React, { useCallback } from "react";
-import { Calendar, momentLocalizer } from 'react-big-calendar'
+import React, { useCallback, useEffect, useState } from "react";
+import { Calendar, momentLocalizer, onNavigate } from 'react-big-calendar'
 import moment from "moment";
 import CustomToolbar from "./CustomToolbar";
 import CustomEvent from "./CustomEvent";
+import { setView } from "../store/actions";
 
-const BigCalendar = ({event, setEvent, handleDialog, handleView, todos}) => {
+const BigCalendar = ({event, setEvent, handleDialog, view, handleView, todos}) => {
 
     const handleSelect = ({start, end}) => {
         setEvent({...event, start: start, end: end })
         handleDialog();
     }
-    const handleClick = () =>{
-        handleView('day')
+    const handleClick = (props) =>{
+        handleView(props)
     }
+
     const eventPropGetter = useCallback((event, start, end, isSelected) => ({
         ...(event.color === 'orange-light' && {
             style: {
@@ -49,9 +51,7 @@ const BigCalendar = ({event, setEvent, handleDialog, handleView, todos}) => {
         <div className="big-calendar__content">
             <Calendar
                 selectable
-                defaultView="month"
                 localizer={localizer}
-                onDrillDown={handleClick}
                 eventPropGetter={eventPropGetter}
                 components={{
                     toolbar: CustomToolbar,
@@ -59,7 +59,10 @@ const BigCalendar = ({event, setEvent, handleDialog, handleView, todos}) => {
                 }}
                 onSelectSlot={handleSelect}
                 events={todos}
-            />
+                popup
+
+                onView={handleClick}
+                />
         </div>
 
     )

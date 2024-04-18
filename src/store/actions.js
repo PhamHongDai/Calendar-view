@@ -1,4 +1,4 @@
-import { ADD_TODO, SET_VIEW, SET_TODO_INPUT } from "./constants";
+import { ADD_TODO, SET_VIEW, SET_TODO_INPUT, SET_DAY_PICKER } from "./constants";
 
 export const setToDoInput = payload => ({
     type: SET_TODO_INPUT,
@@ -10,5 +10,9 @@ export const addToDo = payload => ({
 })
 export const setView = payload => ({
     type: SET_VIEW,
+    payload
+})
+export const setDayPicker = payload => ({
+    type: SET_DAY_PICKER,
     payload
 })
