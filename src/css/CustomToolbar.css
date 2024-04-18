@@ -1,0 +1,48 @@
+.toolbar-contents {
+    display: flex;
+    gap: 10px;
+    background-color: #ffffff;
+    justify-content: space-between;
+}
+
+.left__header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.left__header button{
+    border-radius: 12px;
+    background: #fff;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border: 2px solid #5684AE;
+    color: #5684AE;
+    line-height: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.left__header i{
+    line-height: 14px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #5684AE;
+}
+.left__header h2{
+    color: #0F4C81;
+    width: 280px;
+}
+.right__header{
+    display: flex;
+    align-items: center;
+}
+.right__header select{
+    border-radius: 12px;
+    margin-right: 20px;
+    padding: 10px 15px;
+    background: #5684AE;
+    color: #fff;
+    border: none;
+    line-height: 14px;
+    cursor: pointer;
+}
+

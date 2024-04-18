@@ -1,0 +1,58 @@
+.big-calendar__content{
+    background-color: #fff;
+    border: 1px solid rgb(222, 222, 222);
+    min-height: 500px;
+}
+.rbc-allday-cell {
+    display: none !important;
+}
+.rbc-month-view {
+    display: block;
+}
+.rbc-month-view>div:not(:first-child){
+    height: 100px;
+    background-color: #fff !important;
+}
+.rbc-month-view>div:first-child{
+    border-top: none;
+    color: rgb(180, 180, 180);
+}
+.rbc-row-content .rbc-row .rbc-date-cell{
+    text-align: center;
+    padding-top: 10px;
+}
+.rbc-date-cell {
+    padding: 0;
+}
+.rbc-header + .rbc-header{
+    border-left: none;
+}
+
+.rbc-header{
+    padding-bottom: 10px;
+}
+
+.rbc-month-view{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.rbc-off-range-bg{
+    background-color: #fff;
+}
+.rbc-off-range{
+    color: rgb(180, 180, 180);
+}
+.rbc-today{
+    background-color: #fff;
+}
+.rbc-now>button{
+    background-color: #0F4C81;
+    border-radius: 50%;
+    color: #fff;
+    padding: 3px;
+}
+.rbc-event-label{
+    display: none;
+}

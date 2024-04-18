@@ -1,0 +1,40 @@
+.dialog__wrap{
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.dialog__content{
+    width: 450px;
+    height: 350px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    color: #000;
+    position: relative;
+    border-radius: 5px;
+    padding: 25px;
+}
+.dialog__body li{
+    list-style: none;
+}
+.dialog__body .col{
+    display: flex;
+    flex-direction: column;
+}
+.dialog__body .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between  ;
+}
+.dialog__body .half{
+    width: 45%;
+}
+.dialog__body .col h4{
+    margin: 0;
+}

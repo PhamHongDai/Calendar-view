@@ -1,0 +1,132 @@
+.UC-event__contents{
+    padding-bottom: 20px;
+}
+.UC-event__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+.UC-event__header h2{
+    line-height: 14px;
+    color: #0F4C81;
+}
+.UC-event__header button{
+    border-radius: 24px;
+    background: #0F4C81;
+    margin-left: 20px;
+    padding: 10px 15px;
+    color: #fff;
+    line-height: 14px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+.list-event{
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list-event .blue{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0F4C81;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    border-left: 8px solid orange;
+    min-height: 90px;
+}
+.list-event .blue span,
+.list-event .blue .profile a{
+    color: #FFE4C8;
+    font-size: 14px;
+}
+.list-event .blue .icon__wrap{
+    background-color: #FFE4C8;
+}
+
+
+.list-event .orange-light{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFE4C8;
+    color: #0F4C81;
+    border-radius: 8px;
+    padding: 10px 15px;
+    border-left: 8px solid #0F4C81;
+    min-height: 90px;
+}
+.list-event .orange-light span,
+.list-event .orange-light .profile a{
+    color: #0F4C81;
+    font-size: 14px;
+}
+.list-event .orange-light .icon__wrap{
+    background-color: #0F4C81;
+}
+
+
+.list-event .orange-dark{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F9BE81;
+    color: #0F4C81;
+    border-radius: 8px;
+    padding: 10px 15px;
+    border-left: 8px solid #5684AE;
+    min-height: 90px;
+}
+.list-event .orange-dark span,
+.list-event .orange-dark .profile a{
+    color: #0F4C81;
+    font-size: 14px;
+}
+.list-event .orange-dark .icon__wrap{
+    background-color: #0F4C81;
+}
+
+
+.list-event .item .left{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.left h3{
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+.left .profile{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.left .profile img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.left .profile a{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.right .icon__wrap {
+    border-radius: 50%;
+    padding: 10px 10px;
+    margin: 5px 10px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right .icon__wrap img{
+    height: 26px;
+}

@@ -1,0 +1,18 @@
+.main-contents {
+    display: flex;
+    gap: 10px;
+    background-color: #E4F6ED;
+    padding: 20px 60px;
+    /* min-height: 100vh; */
+}
+
+.left-calendar{
+    flex-grow: 1;
+    background-color: #fff;
+    width: calc(30vh);
+    border: 1px solid rgb(222, 222, 222);
+}
+
+.right-calendar{
+    flex-grow: 2;
+}
