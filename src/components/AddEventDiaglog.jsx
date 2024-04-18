@@ -29,12 +29,12 @@ const AddEventDiaglog = ({ showDialog, setShowDialog, event, setEvent, handleTod
     }
 
     const handleSubmit = () => {
-        if (event.title == 0)
-            alert('Vui long nhap title')
-        else if (event.start == 0)
-            alert('Vui long nhap start')
+        if (event.title === '')
+            alert('Please enter the title')
+        else if (!event.start)
+            alert('Please enter the start')
         else if (!event.end)
-            alert('Vui long nhap end')
+            alert('Please enter the end')
         else {
             handleTodo(event);
             setEvent({
@@ -76,38 +76,38 @@ const AddEventDiaglog = ({ showDialog, setShowDialog, event, setEvent, handleTod
                                 <h4>Color</h4>
                                 <div className="item">
                                     <input type="radio" id="color__blue" name="color" value='blue' onChange={handleColor} defaultChecked />
-                                    <label for="color__blue"><span>Blue</span></label>
+                                    <label for="color__blue">Blue</label>
                                 </div>
                                 <div className="item">
                                     <input type="radio" id="color__orange-light" value='orange-light' onChange={handleColor} name="color" />
-                                    <label for="color__orange-light"><span>Orange light</span></label>
+                                    <label for="color__orange-light">Orange light</label>
                                 </div>
                                 <div className="item">
                                     <input type="radio" id="color__orange-dark" value='orange-dark' onChange={handleColor} name="color" />
-                                    <label for="color__orange-dark"><span>Orange dark</span></label>
+                                    <label for="color__orange-dark">Orange dark</label>
                                 </div>
                             </li>
                             <li className="col">
                                 <h4>Type Event</h4>
                                 <div className="item">
                                     <input type="checkbox" onClick={handleCheck} />
-                                    <label for="manage-category__deny"><span>Metting</span></label>
+                                    <label for="manage-category__deny">Meetting</label>
                                 </div>
+                            </li>
                                 {
                                     check ? (
-                                        <div className="item">
-                                            <h4>Url</h4>
+                                        <li className="col" style={{height: "65px"}}>
+                                        <h4>Url</h4>
                                             <input type="text" placeholder="Enter Url" aria-required="true" onChange={handleResouce} />
-                                        </div>
+                                        </li>
                                     ) : <div className="padding"></div>
                                 }
-                            </li>
                             <li className="row">
                                 <li className="col half">
-                                    <button onClick={handleDialog}>Cancle</button>
+                                    <button className="secondary-btn" onClick={handleDialog}>Cancle</button>
                                 </li>
                                 <li className="col half">
-                                    <button onClick={handleSubmit}>Save</button>
+                                    <button className="primary-btn" onClick={handleSubmit}>Save</button>
                                 </li>
                             </li>
                         </div>
