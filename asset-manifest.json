@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Calendar-view/static/css/main.354b8e66.css",
+    "main.js": "/Calendar-view/static/js/main.00473063.js",
+    "static/media/avt4.jpg": "/Calendar-view/static/media/avt4.4c215033730a766a8f57.jpg",
+    "index.html": "/Calendar-view/index.html",
+    "main.354b8e66.css.map": "/Calendar-view/static/css/main.354b8e66.css.map",
+    "main.00473063.js.map": "/Calendar-view/static/js/main.00473063.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.354b8e66.css",
+    "static/js/main.00473063.js"
+  ]
+}
